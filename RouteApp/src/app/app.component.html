@@ -1,0 +1,10 @@
+<main>
+  <h1 style="text-align: center;">
+    Routing App
+  </h1>
+  id:<input [value]="userId" (blur)="userId=$event.target.value"  onfocus="this.value=''"/><br>
+  <a routerLink="">Home</a><br>
+  <a routerLink="user/{{userId}}">User</a><br>
+  <a routerLink="about/{{userId}}">About</a>
+</main>
+<router-outlet></router-outlet>

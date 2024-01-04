@@ -1,0 +1,11 @@
+<div class="container">
+  <br/>
+ 
+  <app-app-child [(counter)]="c"></app-app-child>
+  <br/>
+  <h2>count = {{c}}</h2> 
+  <!-- <input type="text" [(value)]="testText"/>{{testText}} -->
+  <app-input [(value)]="textValue"></app-input>
+  <a appRedEl>Parents:{{textValue | slice:0:c}}</a>
+  
+</div>

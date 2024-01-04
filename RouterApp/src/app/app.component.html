@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6b92ec;">
+    <h1 class="navbar-brand" style="color: #ffffff;">User Managment System</h1>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <span class="navbar-toggler-icon"></span> -->
+  </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+            <li class="nav-item active">
+                <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/users">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]='["/about",{
+                  outlets:{
+                    map:["location"],
+                    feed:["feedback"]
+                  }
+                }]'>About</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " routerLinkActive="active" routerLink="/TDF">TDF</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " routerLinkActive="active" routerLink="/ReactForm">React Form</a>
+            </li>
+          
+        </ul>
+    </div>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>

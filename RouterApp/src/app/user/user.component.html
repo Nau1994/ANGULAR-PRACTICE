@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+    
+        <tr>
+            <th>Name</th><td>{{user?.name}}</td>
+        </tr>
+        <tr>
+            <th>User Name</th><td>{{user?.username}}</td>
+        </tr>
+        <tr>
+            <th>Email</th><td>{{user?.email}}</td>
+        </tr>
+    
+</table>
+<div>
+
+    <!-- Nav tabs -->
+    <ul ngbNav #nav="ngbNav" class="nav nav-tabs" [(activeId)]="active" id="navId">
+        <li [ngbNavItem]="1" class="nav-item ">
+            <a ngbNavLink routerLink="address" [queryParams]="user?.address" class="nav-link">Address</a>
+        </li>
+        <li [ngbNavItem]="2" class="nav-item">
+            <a ngbNavLink routerLink="company" [queryParams]="user?.company" class="nav-link">Company</a>
+        </li>
+    </ul>
+
+<router-outlet></router-outlet>
+</div>
+<!-- {{user|json}} -->

@@ -1,0 +1,78 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+
+<nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="background-color: #6b92ec;">
+    <h1 class="navbar-brand" style="color: #ffffff;">User Managment System</h1>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item active">
+                <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li *ngIf="loggedIn" class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/post">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/users">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]='["/about",{
+                  outlets:{
+                    map:["location"],
+                    feed:["feedback"]
+                  }
+                }]'>About</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " routerLinkActive="active" routerLink="/TDF">TDF</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/ReactForm">React Form</a>
+            </li>
+
+            
+          
+        </ul>
+        
+
+        <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/home">Login</a>
+          </li>
+        </ul> -->
+    </div>
+    <div class="collapse navbar-collapse" id="collapsibleNavId2">
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item">
+          <form class="form-inline">
+            <div class="form-group row my-1">
+              <div class="col-sm-10">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              </div>
+              <div class="col-sm-1">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavId3">
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li *ngIf="!loggedIn" class=" nav-item active">
+          <a  class="nav-link p-2" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="loggedIn" class=" nav-item active">
+        <button  class="btn btn-danger btn-block float-end" (click)="onLogOut()">
+          Log out
+      </button>
+      </li>
+    </ul>
+    
+  </div>
+    
+</nav>

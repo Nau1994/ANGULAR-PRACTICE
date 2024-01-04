@@ -1,0 +1,5 @@
+<app-post (addedFeed)="onFeedAdded($event)"></app-post>
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+@for (feed of feeds; track $index) {
+    <app-post [feed]="feed" (deletededFeed)="onFeedDelete($event)" (updatedFeed)="onFeedUpdate($event)"></app-post>
+}

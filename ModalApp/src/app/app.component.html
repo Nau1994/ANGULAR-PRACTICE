@@ -1,0 +1,13 @@
+<form #form="ngForm" (ngSubmit)="clickOk(form)">
+  <label for="message">Message</label>
+  <input type="text" ngModel name="message" id="message" placeholder="Enter message">
+  <button >Ok</button>
+
+</form>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="clickROk()">
+  <label for="message">Message</label>
+  <input type="text" formControlName="reactiveMessage" id="message" placeholder="Enter message">
+  <button >R-Ok</button>
+
+</form>

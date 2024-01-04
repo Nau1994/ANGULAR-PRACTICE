@@ -1,0 +1,3 @@
+<!-- <input type="text" [value]="value" (input)="onInput($event)" /> -->
+<input type="text" [value]="value" (input)="valueChange.emit($event.target.value)" />
+child:{{value | uppercase | slice:0:3}}

@@ -1,0 +1,14 @@
+<main>
+  <form #basicForm="ngForm" (ngSubmit)="user=basicForm.value">
+    <a>Name:</a><input name="name" type="text" ngModel placeholder="Enter Name"/><br>
+    <a>Password:</a><input name="password" type="text" ngModel placeholder="Enter Password"/><br>
+    <a>Email:</a><input name="email" type="text" ngModel placeholder="Enter Email"/><br>
+    <button>Register</button>
+  </form>
+  
+  <ul *ngIf="user">
+    <li>{{user.name}}</li>
+    <li>{{user.password}}</li>
+    <li>{{user.email}}</li>
+  </ul>
+</main>

@@ -1,0 +1,18 @@
+::ng-deep .modal-content{
+    /* change border */
+    /* color: red; */
+    outline: auto;
+    outline-color: rgb(250, 176, 149);
+    /* change background */
+    /* background-color: rgb(243, 179, 179) !important; */
+  }
+
+  ::ng-deep .modal-title{
+    /* change border */
+    /* color: red; */
+    /* outline: auto; */
+    /* outline-color: rgb(250, 176, 149); */
+    /* text: center; */
+    /* change background */
+    /* background-color: rgb(243, 179, 179) !important; */
+  }

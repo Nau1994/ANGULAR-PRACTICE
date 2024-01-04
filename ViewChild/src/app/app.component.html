@@ -1,0 +1,12 @@
+<div>
+  <h1 #highlight>this is important message0</h1>
+  <p #highlight>this is important message1</p>
+  <strong #highlight>this is impotant message2</strong><br/>
+  <app-counter #childCounter><h1 #parentContent>Content From Parent</h1></app-counter>
+  <div>
+
+    <button (click)="inc()" style="margin-right: 10px;">+</button>
+    <button (click)="dec()" style="margin-right: 10px;">-</button>
+  </div>
+  <p>Counter From Parent:{{childCounter.counter}}</p>
+</div>

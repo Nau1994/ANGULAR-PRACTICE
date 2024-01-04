@@ -1,0 +1,17 @@
+<main>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input formControlName="name" type="text"  placeholder="Enter Name"/><br>
+    <span *ngIf="name && name.invalid && name.touched" style="color: red;">Name is required</span><br>
+    <input formControlName="password" type="text"  placeholder="Enter Password"/><br>
+    <span *ngIf="password && password.invalid && password.touched" style="color: red;">Password is required</span><br>
+    <input formControlName="email" type="text"  placeholder="Enter Email"/><br>
+    <span *ngIf="email && email.invalid && email.touched" style="color: red;">Email is required</span><br>
+    <button #loginBtn [disabled]="loginForm.invalid" >Login</button>
+  </form>
+  
+  <ul *ngIf="loginForm.valid && isSubmitted">
+    <li>{{name?.value}}</li>
+    <li>{{password?.value}}</li>
+    <li>{{email?.value}}</li>
+  </ul>
+</main>
